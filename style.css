@@ -1,0 +1,115 @@
+/* Default Light Theme */
+:root {
+    --bg-color: #6A89CC;
+    --calc-bg: #EAF0F1;
+    --button-bg: #82ccdd;
+    --button-hover: #60a3bc;
+    --button-text: #000;
+    --display-bg: #CAD3C8;
+    --display-text: #000;
+    --h1-text:#000;
+}
+
+/* Dark Theme */
+.dark-mode {
+    --bg-color: #1e272e;
+    --calc-bg: #485460;
+    --button-bg: #57606f;
+    --button-hover: #747d8c;
+    --button-text: #ffffff;
+    --display-bg: #2d3436;
+    --display-text: #ffffff;
+    --h1-text:#ffffff;
+}
+
+
+/* Centering the container */
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background 0.3s;
+}
+
+h1 {
+    text-align: center;
+    color: var(--h1-text);
+    transition: color 0.3s ease-in-out;
+}
+
+/* Calculator container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Calculator box */
+.calculator {
+    background: var(--calc-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.display {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    width: 100%; /* Ensures it takes full width */
+    margin-bottom: 15px;
+}
+
+.display input {
+    width: 100%;
+    height: 50px;
+    text-align: right;
+    font-size: 1.5em;
+    border: none;
+    background: var(--display-bg);
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--display-text);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2em;
+    border: none;
+    background: var(--button-bg);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: var(--button-text);
+}
+
+button:hover {
+    background: var(--button-hover);
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: var(--button-bg);
+    color: var(--button-text);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 15px;
+}
+
+#theme-toggle:hover {
+    background: var(--button-hover);
+}
